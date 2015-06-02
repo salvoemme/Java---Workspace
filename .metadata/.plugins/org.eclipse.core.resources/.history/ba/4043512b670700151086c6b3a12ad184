@@ -1,0 +1,13 @@
+import java.sql.DriverManager;
+
+
+public class LoaderDriver02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String connessione;
+		connessione = "jdbc:mysql://localhost:3306/test?user=root&password=root";
+		Conenction conn = DriverManager.getConnection(connessione);
+	}
+
+}

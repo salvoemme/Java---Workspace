@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.indovina.IndovinaController">
+   <top>
+      <Label text="Indovina il numero" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnInizio" mnemonicParsing="false" onAction="#doIniziaPartita" text="Inizia partita" />
+            <HBox>
+               <children>
+                  <Label text="Tentativo" />
+                  <TextField fx:id="txtGuess" prefHeight="26.0" prefWidth="53.0" />
+                  <Button fx:id="btnInserisci" mnemonicParsing="false" onAction="#doGuess" text="Inserisci" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label fx:id="txtMessaggio" text="Messaggio" />
+                  <TextField fx:id="txtTentativi" editable="false" prefHeight="26.0" prefWidth="37.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="btnRedo" mnemonicParsing="false" onAction="#doRedo" text="Button" />
+            <DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0">
+                <header>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+                </header>
+                <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+                </content>
+                <expandableContent>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+                </expandableContent>
+            </DialogPane>
+        </items>
+      </ToolBar>
+   </bottom>
+</BorderPane>

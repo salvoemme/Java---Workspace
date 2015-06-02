@@ -1,0 +1,20 @@
+package it.polito.tdp.impiccato.model;
+
+/**
+ * Contiene i dati e la logica per giocare ad una partita al gioco 
+ * dell'impiccato
+ * 
+ * @author salvoemme
+ *	
+ */
+
+public class ImpiccatoModel {
+	//parola segreta (da indovinare)
+	private String segreto;
+	
+	//Numero di errori fatti finora
+	private int errori;
+	
+	//Numero massimo di errori
+	private final int maxErrori = 8;
+}

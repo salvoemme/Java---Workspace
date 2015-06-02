@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.libretto.LibrettoController">
+   <top>
+      <Label text="Libretto Universitario" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="200.0" prefWidth="590.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Data" />
+                  <Label text="Corso" GridPane.columnIndex="1" />
+                  <Label text="Voto" GridPane.columnIndex="2" />
+                  <TextField fx:id="txtCorso" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtVoto" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="txtData" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <AnchorPane prefHeight="77.0" prefWidth="590.0">
+               <children>
+                  <Button fx:id="btnInserisci" mnemonicParsing="false" onAction="#doInserisci" text="Inserisci" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Esami superati" />
+                  <TextField fx:id="txtEsami" prefHeight="26.0" prefWidth="59.0" />
+                  <Label text="Media">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtMedia" prefHeight="26.0" prefWidth="82.0" />
+               </children>
+            </HBox>
+            <Label text="Label" />
+            <Button fx:id="btnVisualizza" mnemonicParsing="false" onAction="#doVisualizza" text="Visalizza voti" />
+            <TextArea fx:id="txtResult" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

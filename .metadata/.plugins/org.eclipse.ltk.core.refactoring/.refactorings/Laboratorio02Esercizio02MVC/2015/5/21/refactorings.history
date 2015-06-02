@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;application&apos; to &apos;it.salvoemme&apos;&#x0A;- Original project: &apos;Laboratorio02Esercizio02MVC&apos;&#x0A;- Original element: &apos;Laboratorio02Esercizio02MVC/src/application&apos;&#x0A;- Renamed element: &apos;Laboratorio02Esercizio02MVC/src/it.salvoemme&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;application&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;application" name="it.salvoemme" qualified="false" references="true" stamp="1431975607223" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,27 @@
+
+public class LoadDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//The newInstance() call is a work around for some
+		//broken Java implementations
+
+		//mostly ClassNotFoundException
+		//Handle the error
+
+			
+			try {
+				Class.forName("com.mysql.jdbc.Driver").newInstance();
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	}
+
+}

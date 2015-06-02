@@ -1,0 +1,35 @@
+package it.polito.tdp.impiccato.model;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Contiene i dati e la logica per giocare ad una partita al gioco 
+ * dell'impiccato
+ * 
+ * @author salvoemme
+ *	
+ */
+
+public class ImpiccatoModel {
+	//parola segreta (da indovinare)
+	private String segreto;
+	
+	//Numero di errori fatti finora
+	private int errori;
+	
+	//Numero massimo di errori
+	private final int MAX_ERRORI = 8;
+	
+	//la stringa che contiene la parte di parola già indovinata
+	// es: _____ diventa _c____, ecc...
+	private String maschera;
+	
+	//quali tentativi sono già stati fatti
+	private Set<String> tentativi;
+	
+	public ImpiccatoModel(){
+		this.tentativi = new HashSet<String>();
+	}
+	
+}

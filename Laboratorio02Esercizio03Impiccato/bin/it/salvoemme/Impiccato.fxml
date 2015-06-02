@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.salvoemme.ImpiccatoController">
+   <top>
+      <Label text="Gioco l'IMPICCATO" textFill="#e81b1b" BorderPane.alignment="CENTER_LEFT">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <VBox prefHeight="250.0" prefWidth="590.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="590.0" spacing="10.0">
+               <children>
+                  <Label text="Parola da indovinare" />
+                  <TextField fx:id="txtWordLucky" />
+                  <Button fx:id="btnStart" mnemonicParsing="false" onAction="#doStart" text="Start" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="580.0" spacing="10.0">
+               <children>
+                  <Label text="Lettera:" />
+                  <ChoiceBox fx:id="chkWord" prefHeight="26.0" prefWidth="51.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="55.0" prefHeight="35.0" prefWidth="580.0" spacing="10.0">
+               <children>
+                  <ProgressBar fx:id="prgBarWrong" prefHeight="20.0" prefWidth="106.0" progress="0.0" />
+                  <TextField fx:id="txtTotalWrong" editable="false" prefHeight="26.0" prefWidth="51.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="100.0" prefHeight="35.0" prefWidth="580.0" spacing="10.0">
+               <children>
+                  <Label text="Parola" />
+                  <TextField fx:id="txtWordMask" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="145.0" prefHeight="35.0" prefWidth="580.0" spacing="10.0">
+               <children>
+                  <Label text="Soluzione" />
+                  <TextField fx:id="txtSolution" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblStatus" text="Status:" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

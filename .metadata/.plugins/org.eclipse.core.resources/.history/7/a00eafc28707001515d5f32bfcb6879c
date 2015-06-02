@@ -1,0 +1,37 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+public class LoaderDriver02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String connessione;
+		connessione = "jdbc:mysql://localhost:3306/test?user=root&password=";
+		try {
+			Connection conn = DriverManager.getConnection(connessione);
+			Statement st = conn.createStatement();
+//			ResultSet rs = new ResultSet(st.executeQuery("select * from dizionario.parola"));
+			long t = System.currentTimeMillis();
+			ResultSet rs = 
+			st.executeQuery("select * from dizionario.parola");
+			System.out.println(System.currentTimeMillis()-t);
+			t = System.currentTimeMillis();
+			while(rs.next()){
+				System.out.println(rs.getString(2));
+			}
+			System.out.println(System.currentTimeMillis()-t);
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			System.out.println("SQLException: " + e.getMessage());
+			System.out.println("SQLState: " + e.getSQLState());
+			System.out.println("VendorError: " + e.getErrorCode());
+		}
+	}
+
+}

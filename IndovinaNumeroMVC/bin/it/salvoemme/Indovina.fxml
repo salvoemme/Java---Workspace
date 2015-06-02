@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.salvoemme.IndovinaController">
+   <top>
+      <Label text="Indovina numero MVC" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <Label fx:id="lblStatus" text="Status:" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="btnStart" mnemonicParsing="false" onAction="#doStart" text="Inizia Partita" textAlignment="CENTER" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Inserisci il numero" />
+                  <TextField fx:id="txtNumberGuess" prefHeight="26.0" prefWidth="85.0" />
+                  <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#DoInsert" text="Inserisci" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblGuess" text="Tentativo:" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,96 @@
+package it.polito.tdp.impiccato.model;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Contiene i dati e la logica per giocare ad una partita al gioco 
+ * dell'impiccato
+ * 
+ * @author salvoemme
+ *	
+ */
+
+public class ImpiccatoModel {
+	//parola segreta (da indovinare)
+	private String segreto;
+	
+	//Numero di errori fatti finora
+	private int errori;
+	
+	//Numero massimo di errori
+	private final int MAX_ERRORI = 8;
+	
+	//la stringa che contiene la parte di parola già indovinata
+	// es: _____ diventa _c____, ecc...
+	private String maschera;
+	
+	//quali tentativi sono già stati fatti
+	private Set<String> tentativi;
+	
+	public ImpiccatoModel(){
+		this.tentativi = new HashSet<String>();
+		this.segreto = "";
+		this.errori = 0;
+		this.maschera = "";
+	}
+	
+	public void nuovaPartita(String segreto){
+		this.segreto = segreto.toUpperCase();
+		this.errori = 0;
+		this.tentativi.clear();
+		this.maschera = "";
+		
+		for (int i = 0; i<this.segreto.length();i++)
+			this.maschera+="_";
+	}
+	/**
+	 * verifica se il tentativo fatto è corretto, cioè non è stato 
+	 * fatto in precedenza, ed appartiene alla parola da indovinare. 
+	 * 
+	 * @param tenta La lettera che sto tentando di indovinare
+	 * @return false se errore, true se tentativo corretto
+	 */
+	public boolean tentativo(String tenta){
+		tenta = tenta.toUpperCase();
+		
+		//tentativo già fatto in precedenza;
+		if (this.tentativi.contains(tenta)){
+			this.errori++;
+			return false;
+		}
+		this.tentativi.add(tenta);
+		
+		//verifico se la lettera è presente
+		if (this.segreto.contains(tenta)){
+			//ok tentativo buono
+			
+			for (int i=0; i<this.segreto.length();i++){
+				
+			}
+			return true;
+		} else {
+			this.errori++;
+			return false;
+		}
+	}
+
+	public int getErrori() {
+		return errori;
+	}
+
+	public int getMAX_ERRORI() {
+		return MAX_ERRORI;
+	}
+
+	public String getMaschera() {
+		return maschera;
+	}
+	
+	public static void main(String[]args){
+		ImpiccatoModel model = new ImpiccatoModel();
+		
+		model.nuovaPartita("ciao");
+		
+	}
+}

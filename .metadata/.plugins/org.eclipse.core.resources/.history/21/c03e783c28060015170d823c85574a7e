@@ -1,0 +1,8 @@
+
+public class Test {
+	public String s1;
+	
+	Test(String s){
+		this.s1 = s;
+	}
+}
